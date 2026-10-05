@@ -1,0 +1,130 @@
+.explore-header {
+  margin-bottom: 2.5rem;
+}
+
+.explore-controls {
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.explore-search-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: var(--beige-bg);
+  border: 1px solid var(--beige-border);
+  border-radius: var(--radius-md);
+  padding: 0.5rem 1rem;
+}
+
+.explore-search-input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-size: 0.95rem;
+  padding: 0.4rem 0.5rem;
+  color: var(--text-dark);
+}
+
+.clear-search-btn {
+  background: transparent;
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 0 0.5rem;
+}
+
+.category-pills-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.4rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+.category-pill {
+  padding: 0.45rem 1.1rem;
+  border-radius: 50px;
+  background: var(--beige-bg);
+  border: 1px solid var(--beige-border);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: var(--transition-smooth);
+}
+
+.category-pill:hover {
+  border-color: var(--primary-forest);
+  color: var(--primary-forest);
+}
+
+.category-pill.active {
+  background: var(--primary-forest);
+  color: var(--white);
+  border-color: var(--primary-forest);
+  box-shadow: 0 4px 12px rgba(11, 51, 39, 0.2);
+}
+
+.explore-sort-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--beige-border);
+}
+
+.sort-select-box {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.sort-select {
+  border: 1px solid var(--beige-border);
+  background: var(--white);
+  border-radius: var(--radius-sm);
+  padding: 0.4rem 0.75rem;
+  font-size: 0.875rem;
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.results-status {
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.empty-results {
+  text-align: center;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+}
+
+.empty-icon {
+  color: var(--secondary-amber);
+  margin-bottom: 1rem;
+}
+
+.empty-results h3 {
+  font-size: 1.35rem;
+  color: var(--primary-deep);
+  margin-bottom: 0.5rem;
+}
+
+.empty-results p {
+  max-width: 480px;
+  font-size: 0.95rem;
+}

@@ -1,0 +1,248 @@
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(5, 32, 24, 0.75);
+  backdrop-filter: blur(8px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+.modal-container {
+  position: relative;
+  width: 100%;
+  max-width: 860px;
+  max-height: 90vh;
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  overflow-y: auto;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  z-index: 10;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--text-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-smooth);
+  box-shadow: var(--shadow-md);
+}
+
+.modal-close-btn:hover {
+  background: var(--white);
+  transform: scale(1.1);
+}
+
+.modal-header-banner {
+  position: relative;
+  height: 280px;
+  width: 100%;
+}
+
+.modal-banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-banner-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem 2rem 1.5rem;
+  background: linear-gradient(to top, rgba(11, 51, 39, 0.95) 0%, rgba(11, 51, 39, 0.4) 60%, transparent 100%);
+  color: var(--white);
+}
+
+.modal-badges {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.modal-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 0.25rem;
+}
+
+.modal-subtitle {
+  font-size: 1rem;
+  color: #FCD34D;
+  font-weight: 600;
+}
+
+.modal-body {
+  padding: 2rem;
+}
+
+.modal-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 640px) {
+  .modal-stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.modal-stat-card {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  background: var(--beige-bg);
+  border: 1px solid var(--beige-border);
+}
+
+.modal-stat-card .stat-icon {
+  color: var(--primary-forest);
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.stat-value {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--primary-deep);
+}
+
+.modal-section {
+  margin-bottom: 2rem;
+}
+
+.modal-section-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary-deep);
+  margin-bottom: 0.75rem;
+  border-bottom: 2px solid var(--beige-border);
+  padding-bottom: 0.5rem;
+}
+
+.modal-text {
+  font-size: 0.975rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.modal-attractions-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .modal-attractions-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.attraction-card {
+  display: flex;
+  gap: 0.85rem;
+  padding: 0.85rem;
+  border-radius: var(--radius-md);
+  background: var(--white);
+  border: 1px solid rgba(11, 51, 39, 0.08);
+  box-shadow: var(--shadow-sm);
+}
+
+.attraction-img {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.attraction-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.attraction-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.attraction-header h4 {
+  font-size: 0.925rem;
+  font-weight: 700;
+  color: var(--primary-deep);
+}
+
+.attraction-cost {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--primary-accent);
+  background: var(--primary-light);
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+}
+
+.attraction-desc {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+  margin: 0.25rem 0;
+}
+
+.attraction-meta {
+  display: flex;
+  gap: 0.75rem;
+  font-size: 0.75rem;
+  color: var(--text-light);
+}
+
+.attraction-meta span {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.modal-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--beige-border);
+}
+
+@media (min-width: 640px) {
+  .modal-actions {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}
